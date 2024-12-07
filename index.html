@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bookmarker</title>
+
+    <link rel="icon" href="images/bookMarkIcon.png" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.min.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body data-bs-theme="dark" class="bg-info-subtle">
+    <h1 class="text-center mt-4 text-info display-6 fw-bold">Bookmarker</h1>
+    <p class="text-center mt-2 text-white fs-6 fw-medium">
+      Bookmark your favorite sites
+    </p>
+
+    <!-- <form> -->
+
+    <div
+      class="container w-75 mx-auto mt-4 bg-info-subtle bg-gradient border border-info-subtle rounded-4 p-4 shadow"
+    >
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control border-info-subtle rounded-pill"
+          id="siteName"
+          placeholder=""
+        />
+        <label for="siteName" class="text-info-emphasis"
+          ><i class="fa-solid fa-book-bookmark text-info-emphasis me-2"></i>Site
+          Name</label
+        >
+      </div>
+
+      <div class="form-floating mb-3">
+        <input
+          type="url"
+          class="form-control border-info-subtle rounded-pill"
+          id="siteURL"
+          placeholder=""
+        />
+        <label for="siteURL" class="text-info-emphasis"
+          ><i class="fa-solid fa-link text-info-emphasis me-2"></i>Site
+          URL</label
+        >
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <button
+          type="submit"
+          onclick="addSite()"
+          class="btn btn-outline-info px-5 py-2 rounded-pill"
+          id="updateBtn"
+        >
+          Add Website
+        </button>
+
+        <div class="form-floating">
+          <input
+            type="search"
+            class="form-control px-3 border-info-subtle rounded-pill"
+            id="searchField"
+            placeholder=""
+            onkeyup="seachSite()"
+          />
+          <label for="searchField" class="text-info-emphasis"
+            ><i class="fa-solid fa-search text-info-emphasis me-2"></i
+            >Search</label
+          >
+        </div>
+      </div>
+    </div>
+    <table class="table w-75 mx-auto mt-5">
+      <thead class="rounded-pill">
+        <th>Index</th>
+        <th>Website Name</th>
+        <th>Update</th>
+        <th>Visit</th>
+        <th>Delete</th>
+      </thead>
+      <tbody id="tBody"></tbody>
+    </table>
+
+    <!-- </form> -->
+
+    <!-- <dialog> -->
+    <dialog id="urlRulesDialog" class="border-info-subtle rounded-3">
+      <p class="">
+        Please enter a valid Name and URL<br />
+        Name: minimum 2 character<br />
+        URL: should be start with (https://) or (www.) or both of them and end
+        with minimum 2 character after (.)
+      </p>
+      <button
+        id="closeDialog"
+        class="dialog-btn btn btn-outline-info px-2 py-1 rounded-pill"
+      >
+        Close
+      </button>
+    </dialog>
+
+    <!-- </dialog> -->
+
+    <!-- <modal> -->
+
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+
+    <!-- </modal> -->
+
+    <!-- <js bootstrap> -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- </js bootstrap> -->
+
+    <!-- <js> -->
+
+    <script src="js/index.js"></script>
+
+    <!-- </js> -->
+  </body>
+</html>
